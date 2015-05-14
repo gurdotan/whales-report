@@ -72,7 +72,7 @@ $(document).ready(function(){
             unstick: 'header-unstick'
         }
     };
-	var headhesive = new Headhesive('.the-header', options);
+	//var headhesive = new Headhesive('.the-header', options);
 
 	// Remove class of the clone header
 	// so we can distinguish between the original and the clone header.
