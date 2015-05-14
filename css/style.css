@@ -1655,7 +1655,7 @@ a.menu-toggle span {
 	width: 50%;
 	height: 100%;
 	position: absolute;
-	background: rgba(0, 0, 34, 0.7);
+	/*background: rgba(0, 0, 34, 0.7);*/
 }
 
 .hero-split-left {
@@ -1673,7 +1673,7 @@ a.menu-toggle span {
 }
 
 .hero-form-layout #hero {
-	background: url(../images/stocks/stock3.jpg) no-repeat center center fixed;
+	background: url(../images/stocks/rays_of_the_sun-1471168.jpg) no-repeat center center fixed;
 }
 
 .app-layout #hero {
