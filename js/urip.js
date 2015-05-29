@@ -338,16 +338,18 @@ $(document).ready(function(){
 
         // Variable declaration
         var error = false;
-        var fname = $('#hero-fname').val();
+        var name = $('#hero-name').val();
         var email = $('#hero-email').val();
-        var username = $('#hero-username').val();
+        var studio = $('#hero-studio').val();
+        var dau = $('#hero-dau').val();
+        var employees = $('#hero-employees').val();
 
      	// Form field validation
-        if(fname.length == 0){
+        if(name.length == 0){
             var error = true;
-            $('#hero-fname').parent('div').addClass('field-error');
+            $('#hero-name').parent('div').addClass('field-error');
         }else{
-            $('#hero-fname').parent('div').removeClass('field-error');
+            $('#hero-name').parent('div').removeClass('field-error');
         }
         if(email.length == 0 || email.indexOf('@') == '-1'){
             var error = true;
@@ -355,11 +357,25 @@ $(document).ready(function(){
         }else{
             $('#hero-email').parent('div').removeClass('field-error');
         }
-        if(username.length == 0){
+        if(studio.length == 0){
             var error = true;
-            $('#hero-username').parent('div').addClass('field-error');
+            $('#hero-studio').parent('div').addClass('field-error');
         }else{
-            $('#hero-username').parent('div').removeClass('field-error');
+            $('#hero-studio').parent('div').removeClass('field-error');
+        }
+
+        if(dau == ''){
+            var error = true;
+            $('#hero-dau').parent('div').addClass('field-error');
+        }else{
+            $('#hero-dau').parent('div').removeClass('field-error');
+        }
+
+        if(employees == ''){
+            var error = true;
+            $('#hero-employees').parent('div').addClass('field-error');
+        }else{
+            $('#hero-employees').parent('div').removeClass('field-error');
         }
 
         if(error == true){

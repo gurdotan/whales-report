@@ -821,24 +821,6 @@
 		margin-top: 25px;
 	}
 
-	/* CUSTOMER STORIES/LOGOS SECTION */
-	ul.customer-logos li {
-		width: 33.333%;
-		height: 175px;
-	}
-
-	.customer-box-wrapper hr {
-		width: 95%;
-	}
-
-	ul.customer-logos li:hover .customer-logo {
-		opacity: 1;
-	}
-
-	.customer-quote {
-		display: none;
-	}
-
 	/* PORTFOLIO SECTION */
 	ul.portfolio-list li {
 		width: 50%;

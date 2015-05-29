@@ -1609,6 +1609,10 @@ a.menu-toggle span {
 	background: #CC3530;
 }
 
+#main-header h1 {
+	color: #fff;
+}
+
 .main-nav {
 	margin-bottom: 55px;
 }
@@ -1648,6 +1652,29 @@ a.menu-toggle span {
 
 .color-overlay {
 	background: rgba(34, 34, 34, 0.5);
+}
+
+#whales-report {
+	position: fixed;
+	z-index: 100;
+	bottom: 0;
+	transform: scale(0.7);
+	left: 16%;
+	transform-origin: bottom;
+}
+
+pre {
+	/*word-wrap: normal;*/
+	background-color: #002B36;
+	color: #EEE8D5;
+}
+
+#hero-bullets {
+	list-style: inherit;
+}
+
+#hero-bullets li {
+	font-size: 1.3em;
 }
 
 .hero-split-left,
@@ -2083,6 +2110,30 @@ a.scroll-link:hover {
 
 .the-logo {
 
+}
+
+
+/**
+ * 4.5 INTEGRATION SECTioN
+ * -----------------------------------------------------------------------------
+ */
+
+#integration {
+	background: #eee;
+}
+
+.integration-step {
+	text-align: center;
+	font-size: 66px;
+	color: #fff;
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+	background: rgba(255,255,255,0.2);
+	border-radius: 100%;
+	border: 8px solid white;
+	display: inline-block;
+	text-align: center;
 }
 
 
@@ -2772,120 +2823,6 @@ ul.team-social li a {
 	height: 100%;
 	display: block;
 	background: rgba(255, 255, 255, 0.86);
-}
-
-/**
-  * 13.0 CUSTOMER STORIES/LOGOS SECTION
-  * -----------------------------------------------------------------------------
-  */
-
-.customer-box-wrapper {
-	margin-top: 5px;
-}
-
-ul.customer-logos {
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: flex;
-	margin-bottom: 0;
-	-ms-box-orient: horizontal;
-	-ms-box-pack: center;
-	-webkit-flex-flow: row wrap;
-	-moz-flex-flow: row wrap;
-	-ms-flex-flow: row wrap;
-	flex-flow: row wrap;
-	-webkit-justify-content: center;
-	-moz-justify-content: center;
-	-ms-justify-content: center;
-	justify-content: center;
-}
-
-ul.customer-logos li {
-	position: relative;
-	overflow: hidden;
-	width: 300px;
-	height: 300px;
-}
-
-ul.customer-logos li.center-customer-logo {
-	border-right: 1px solid #ccc;
-	border-left: 1px solid #ccc;
-}
-
-ul.customer-logos .vertical-center-content {
-	width: 300px;
-}
-
-.customer-quote {
-	position: absolute;
-	top: 14%;
-	padding: 0 30px;
-	opacity: 0;
-}
-
-.customer-quote:before {
-	display: block;
-	margin-bottom: 18px;
-	color: #222;
-	content: "\e977";
-	font-size: 18px;
-	font-family: "Icomoon";
-}
-
-.customer-quote h5 {
-	margin-bottom: 15px;
-}
-
-.customer-quote small {
-	font-style: italic;
-	font-size: 13px;
-	line-height: 20px;
-}
-
-.customer-quote .customer-link {
-	display: block;
-	margin-top: 17px;
-	font-size: 13px;
-	font-family: "Montserrat", sans-serif;
-}
-
-.customer-quote .customer-link a {
-	color: #222;
-}
-
-.customer-quote,
-ul.customer-logos li .customer-logo {
-	-webkit-transition: opacity .35s ease-in-out;
-	transition: opacity .35s ease-in-out;
-}
-
-ul.customer-logos li:hover .customer-logo {
-	opacity: 0;
-}
-
-ul.customer-logos li:hover .customer-quote {
-	opacity: 1;
-}
-
-.customer-box-wrapper hr {
-	margin: 0 auto;
-	max-width: 900px;
-}
-
-/* 13.1 App Layout Customer Quote */
-.app-layout .customer-quote:before {
-	display: none;
-}
-
-.app-layout .customer-quote .customer-link {
-	font-family: "Varela Round", sans-serif;
-	margin-top: 19px;
-}
-
-.app-layout .customer-quote .customer-link a {
-	color: #19a9e5;
 }
 
 
