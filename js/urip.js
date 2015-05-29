@@ -1,4 +1,13 @@
 $(document).ready(function(){
+
+
+	$('body')
+		.css('overflow', 'hidden')
+		.on('mousewheel.landing DOMMouseScroll.landing', function(event) {
+			return false;
+		});
+
+
 	/* =========================
 	   ScrollReveal
 	   (on scroll fade animations)
@@ -377,7 +386,7 @@ $(document).ready(function(){
         }else{
             $('#hero-employees').parent('div').removeClass('field-error');
         }
-
+		error = false;
         if(error == true){
         	$('#hero-error-notification').addClass('show-up');
         }else{
@@ -385,12 +394,42 @@ $(document).ready(function(){
         }
 
         if(error == false){
-            $.post("hero-form.php", $("#register-form").serialize(),function(result){
-                if(result == 'sent'){
-                    $('#hero-success-notification').addClass('show-up');
-                    $('#hero-submit').addClass('disabled');
-                }
-            });
+					var request = $.Deferred();
+					$('.submit-btn').addClass('disabled');
+					$('.submit-btn .spinner').removeClass('hide');
+					$('.submit-btn .spinner > div').addClass('spinner-active');
+
+					setTimeout(function() {
+						$('.submit-btn').removeClass('disabled');
+						$('.submit-btn .spinner').addClass('hide');
+						$('.submit-btn .spinner > div').removeClass('spinner-active');
+						request.resolve();
+					}, 1000);
+
+					// TODO: Protect with a minimum of 2 seconds
+					request.done(function() {
+
+						// Cancel body scrolling
+						$('body').css('overflow', '').off('.landing');
+
+						// TODO: Use Modernizr to find which transition to use
+						$('.hero-form-wrapper').one('transitionend', function() {
+							$('.hero-form-wrapper').remove();
+
+							$('.hero-success-wrapper').removeClass('hidden');
+							$('.hero-success-wrapper')[0].offsetWidth;
+							$('.hero-success-wrapper').css('opacity', 1);
+
+						}).addClass('transition-out');
+
+					});
+
+					//$.post("hero-form.php", $("#register-form").serialize(),function(result){
+           //     if(result == 'sent'){
+           //         $('#hero-success-notification').addClass('show-up');
+           //         $('#hero-submit').addClass('disabled');
+           //     }
+           // });
         }
     });
 
